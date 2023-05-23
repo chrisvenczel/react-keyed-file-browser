@@ -829,7 +829,7 @@ class RawFileBrowser extends React.Component {
             <this.props.headerRenderer
               {...headerProps}
               {...this.props.headerRendererProps}
-              //browserType={this.props.browserType}
+              browserType={this.props.browserType}
             />
           )
         }
@@ -881,7 +881,7 @@ class RawFileBrowser extends React.Component {
             <this.props.headerRenderer
               {...headerProps}
               {...this.props.headerRendererProps}
-              //browserType={this.props.browserType}
+              browserType={this.props.browserType}
             />
           )
         }
