@@ -5,6 +5,7 @@ class Filter extends React.Component {
   static propTypes = {
     value: PropTypes.string.isRequired,
     updateFilter: PropTypes.func,
+    browserType: 'sensor' | 'sample'
   }
 
   handleFilterChange = (event) => {
@@ -16,7 +17,7 @@ class Filter extends React.Component {
     return (
       <input
         type="search"
-        placeholder="Search Sensors"
+        placeholder={`Search ${this.props.browserType === 'sensor' ? 'Sensors' : this.props.browserType === 'sample' ? 'Samples' : ''}`}
         value={this.props.value}
         onChange={this.handleFilterChange}
       />
