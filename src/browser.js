@@ -595,13 +595,11 @@ class RawFileBrowser extends React.Component {
       onDeleteFile, onDeleteFolder, onDownloadFile,
       onDownloadFolder, browserType
     } = this.props
-    console.log('598'+browserType)
     const browserProps = this.getBrowserProps()
     const selectionIsFolder = (selectedItems.length === 1 && isFolder(selectedItems[0]))
     const selectionPermissions = selectedItems.length === 1 ? selectedItems[0].permissions : "viewer";
     let filter
     if (canFilter) {
-      console.log('604'+browserType)
       filter = (
         <FilterRenderer
           value={this.state.nameFilter}
@@ -676,7 +674,6 @@ class RawFileBrowser extends React.Component {
       }
 
       if (!isFolder(file)) {
-        console.log('679'+browserType)
         renderedFiles.push(
           <FileRenderer
             {...file}
@@ -828,7 +825,6 @@ class RawFileBrowser extends React.Component {
         }
 
         if (this.props.headerRenderer) {
-          console.log('831'+browserType)
           header = (
             <this.props.headerRenderer
               {...headerProps}
@@ -881,7 +877,6 @@ class RawFileBrowser extends React.Component {
         }
 
         if (this.props.headerRenderer) {
-          console.log('884'+browserType)
           header = (
             <this.props.headerRenderer
               {...headerProps}
