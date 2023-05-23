@@ -20,9 +20,8 @@ class RawTableHeader extends React.Component {
       createFiles: PropTypes.func,
       moveFolder: PropTypes.func,
       moveFile: PropTypes.func,
-    }),
-
-    browserType: PropTypes.string
+      browserType: PropTypes.string
+    })
   }
 
   handleHeaderClick(event) {
@@ -37,7 +36,7 @@ class RawTableHeader extends React.Component {
           selected: this.props.isSelected,
         })}
       >
-        {this.props.browserType === 'sensor' ? 'Devices' : this.props.browserType === 'sample' ? 'Samples' : 'Files'}
+        {this.props.browserProps.browserType === 'sensor' ? 'Devices' : this.props.browserProps.browserType === 'sample' ? 'Samples' : 'Files'}
       </div>
     )
 

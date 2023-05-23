@@ -16,7 +16,6 @@ class RawTableFile extends BaseFile {
       analysisFunc, dataLogFunc,
 
       // Sensor Settings
-      customType,
       statusIcon,
       sensorSettings
     } = this.props

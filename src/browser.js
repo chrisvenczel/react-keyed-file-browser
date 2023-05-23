@@ -593,7 +593,7 @@ class RawFileBrowser extends React.Component {
       actionRenderer: ActionRenderer,
       onCreateFolder, onRenameFile, onRenameFolder,
       onDeleteFile, onDeleteFolder, onDownloadFile,
-      onDownloadFolder, browserType
+      onDownloadFolder
     } = this.props
     const browserProps = this.getBrowserProps()
     const selectionIsFolder = (selectedItems.length === 1 && isFolder(selectedItems[0]))
@@ -604,7 +604,7 @@ class RawFileBrowser extends React.Component {
         <FilterRenderer
           value={this.state.nameFilter}
           updateFilter={this.updateFilter}
-          browserType={browserType}
+          browserType={browserProps.browserType}
           {...filterRendererProps}
         />
       )
@@ -829,7 +829,6 @@ class RawFileBrowser extends React.Component {
             <this.props.headerRenderer
               {...headerProps}
               {...this.props.headerRendererProps}
-              browserType={this.props.browserType}
             />
           )
         }
@@ -881,7 +880,6 @@ class RawFileBrowser extends React.Component {
             <this.props.headerRenderer
               {...headerProps}
               {...this.props.headerRendererProps}
-              browserType={this.props.browserType}
             />
           )
         }
