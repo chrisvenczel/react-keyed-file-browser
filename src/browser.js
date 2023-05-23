@@ -604,7 +604,7 @@ class RawFileBrowser extends React.Component {
         <FilterRenderer
           value={this.state.nameFilter}
           updateFilter={this.updateFilter}
-          browserType={browserProps.browserType}
+          //browserType={browserProps.browserType} WEIRD
           {...filterRendererProps}
         />
       )
