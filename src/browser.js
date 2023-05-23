@@ -582,7 +582,7 @@ class RawFileBrowser extends React.Component {
       addGateway: this.props.addGateway ? this.addGateway : undefined,
       addReport: this.props.addReport ? this.addReport : undefined,
       addOrganization: this.props.addOrganization ? this.addOrganization : undefined,
-      browserType: this.props.browserType ? this.props.browserType : 'sensor',
+      browserType: this.props.browserType ? this.props.browserType : undefined,
     }
   }
 
@@ -681,7 +681,7 @@ class RawFileBrowser extends React.Component {
             browserProps={browserProps}
             {...fileRendererProps}
             sensorSettings={this.sensorSettings}
-            customType={this.props.browserType === 'sensor' ? 'sensor' : this.props.browserType === 'sample' ? 'sample' : ''}
+            customType={this.props.browserType}
           />
         )
       } else {

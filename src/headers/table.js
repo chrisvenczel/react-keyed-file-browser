@@ -37,7 +37,7 @@ class RawTableHeader extends React.Component {
           selected: this.props.isSelected,
         })}
       >
-        {this.props.browserType === 'sensor' ? 'Devices' : this.props.browserType === 'samples' ? 'Samples' : 'Files'}
+        {this.props.browserType === 'sensor' ? 'Devices' : this.props.browserType === 'sample' ? 'Samples' : 'Files'}
       </div>
     )
 
