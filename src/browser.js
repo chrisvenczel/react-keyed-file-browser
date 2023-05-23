@@ -681,7 +681,7 @@ class RawFileBrowser extends React.Component {
             browserProps={browserProps}
             {...fileRendererProps}
             sensorSettings={this.sensorSettings}
-            customType={this.props.browserType === 'sensor' ? 'sensor' : this.props.browserType === 'sample' ? 'sample' : ''}
+            customType={!this.props.browserType ? '' : this.props.browserType === 'sensor' ? 'sensor' : this.props.browserType === 'sample' ? 'sample' : ''}
           />
         )
       } else {
