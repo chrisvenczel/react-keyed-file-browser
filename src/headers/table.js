@@ -36,7 +36,7 @@ class RawTableHeader extends React.Component {
           selected: this.props.isSelected,
         })}
       >
-        {/*this.props.browserProps.browserType*/'Test'}
+        Test
       </div>
     )
 
